@@ -184,7 +184,7 @@ export default function ({ external = [], edge, split } = {}) {
 				await esbuild.build({
 					entryPoints: [`${tmp}/edge.js`],
 					outfile: `${dirs.functions}/${name}.func/index.js`,
-					target: 'es2020', // TODO verify what the edge runtime supports
+					target: 'es2022',
 					bundle: true,
 					platform: 'browser',
 					format: 'esm',
